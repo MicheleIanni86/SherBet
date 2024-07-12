@@ -41,4 +41,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    public function leagues() {
+        return $this->hasMany(League::class);
+    }
+
+    public function predictions() {
+        return $this->hasMany(Prediction::class);
+    }
+
 }
