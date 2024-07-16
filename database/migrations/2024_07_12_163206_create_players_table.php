@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('player_id');
-            $table->foreignId('team_id')->constrained();
+            $table->unsignedInteger('team_id')->nullable();
+            $table->foreign('team_id')->references('team_id')->on('teams')->nullOnDelete();
             $table->string('lastname');
             $table->string('photo')->nullable();
             $table->string('position');
