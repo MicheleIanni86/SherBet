@@ -2,11 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Team;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Http;
-
-use function Termwind\terminal;
 
 class TeamSeeder extends Seeder
 {
@@ -27,7 +26,15 @@ class TeamSeeder extends Seeder
             if ($response->ok()) {
                 $data = $response->json();
                 $results = $data['response'];
-                dump($results);
+
+                foreach ($results as $team) {
+                    $new_team = new Team;
+                    $new_team->team_id = $team['team']['id'];
+                    $new_team->team_name = $team['team']['name'];
+                    $new_team->team_code = $team['team']['code'];
+                    $new_team->logo = $team['team']['logo'];
+                    $new_team->save();
+                }
             } else {
                 return response()->json(['message' => 'Errore nella richiesta all\'API esterna'], $response->status());
             }
