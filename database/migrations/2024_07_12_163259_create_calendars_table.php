@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('calendars', function (Blueprint $table) {
             $table->id();
             $table->char('season', 4);
-            $table->unsignedInteger('match_id');
+            $table->unsignedInteger('match_id')->unique();
             $table->date('match_date');
             $table->char('match_status', 5);
             $table->unsignedTinyInteger('match_elapsed')->nullable();

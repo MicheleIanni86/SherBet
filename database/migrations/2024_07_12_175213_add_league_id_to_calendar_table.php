@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('calendars', function (Blueprint $table) {
-            $table->foreignId('league_id')->after('id')->constrained();
+            $table->foreignId('league_id')->after('id')->nullable()->constrained()->nullOnDelete();
         });
     }
 
@@ -26,8 +26,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('calendars', function (Blueprint $table) {
-           $table->dropForeign('calendars_league_id_foreign');
-           $table->dropColumn('league_id');
+            $table->dropForeign('calendars_league_id_foreign');
+            $table->dropColumn('league_id');
         });
     }
 };
