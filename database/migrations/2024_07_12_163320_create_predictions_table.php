@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('predictions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->unsignedInteger('championship_id');
             $table->unsignedInteger('match_id');
             $table->foreign('match_id')->references('match_id')->on('calendars')->cascadeOnDelete();
             $table->unsignedTinyInteger('home_score')->nullable();

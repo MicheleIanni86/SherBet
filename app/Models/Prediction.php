@@ -13,7 +13,4 @@ class Prediction extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function calendar() {
-        return $this->belongsTo(Calendar::class);
-    }
 }

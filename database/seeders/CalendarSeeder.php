@@ -33,6 +33,7 @@ class CalendarSeeder extends Seeder
                 foreach ($results as $match) {
                     $new_match = new Calendar;
                     $new_match->season = $season_year;
+                    $new_match->championship_id = $match['league']['id'];
                     $new_match->match_id = $match['fixture']['id'];
                     $date = Carbon::parse($match['fixture']['date'])-> format('Y-m-d H:i:s');
                     $new_match->match_date = $date;

@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('calendars', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('championship_id');
             $table->char('season', 4);
             $table->unsignedInteger('match_id')->unique();
             $table->dateTime('match_date');

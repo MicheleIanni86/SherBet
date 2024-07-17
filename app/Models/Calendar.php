@@ -9,7 +9,4 @@ class Calendar extends Model
 {
     use HasFactory;
 
-    public function predictions() {
-        return $this->hasMany(Prediction::class);
-    }
 }
