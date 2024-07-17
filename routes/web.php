@@ -28,8 +28,7 @@ Route::middleware('auth')
 
     Route::get('/prediction', [PredictionController::class, 'index'])
       ->name('prediction');
-      Route::post('/filter', [PredictionController::class, 'filter']);
-
+    Route::post('/filter', [PredictionController::class, 'filter']);
   });
 
 require __DIR__ . '/auth.php';
