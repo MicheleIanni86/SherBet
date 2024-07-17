@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Prediction;
+use App\Models\Player;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class PredictionController extends Controller
+class PlayerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class PredictionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Prediction  $prediction
+     * @param  \App\Models\Player  $player
      * @return \Illuminate\Http\Response
      */
-    public function show(Prediction $prediction)
+    public function show(Player $player)
     {
         //
     }
@@ -52,10 +53,10 @@ class PredictionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Prediction  $prediction
+     * @param  \App\Models\Player  $player
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prediction $prediction)
+    public function edit(Player $player)
     {
         //
     }
@@ -64,10 +65,10 @@ class PredictionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Prediction  $prediction
+     * @param  \App\Models\Player  $player
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prediction $prediction)
+    public function update(Request $request, Player $player)
     {
         //
     }
@@ -75,10 +76,10 @@ class PredictionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Prediction  $prediction
+     * @param  \App\Models\Player  $player
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prediction $prediction)
+    public function destroy(Player $player)
     {
         //
     }

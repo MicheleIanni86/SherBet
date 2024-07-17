@@ -1,20 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\League;
+use App\Models\Prediction;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class LeagueController extends Controller
+class PredictionController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function index()
     {
-        //
+        return view('admin.prediction');    
     }
 
     /**
@@ -41,10 +42,10 @@ class LeagueController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\League  $league
+     * @param  \App\Models\Prediction  $prediction
      * @return \Illuminate\Http\Response
      */
-    public function show(League $league)
+    public function show(Prediction $prediction)
     {
         //
     }
@@ -52,10 +53,10 @@ class LeagueController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\League  $league
+     * @param  \App\Models\Prediction  $prediction
      * @return \Illuminate\Http\Response
      */
-    public function edit(League $league)
+    public function edit(Prediction $prediction)
     {
         //
     }
@@ -64,10 +65,10 @@ class LeagueController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\League  $league
+     * @param  \App\Models\Prediction  $prediction
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, League $league)
+    public function update(Request $request, Prediction $prediction)
     {
         //
     }
@@ -75,10 +76,10 @@ class LeagueController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\League  $league
+     * @param  \App\Models\Prediction  $prediction
      * @return \Illuminate\Http\Response
      */
-    public function destroy(League $league)
+    public function destroy(Prediction $prediction)
     {
         //
     }

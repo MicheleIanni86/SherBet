@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Player;
+use App\Models\Calendar;
 use Illuminate\Http\Request;
-
-class PlayerController extends Controller
+use App\Http\Controllers\Controller;
+class CalendarController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PlayerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Player  $player
+     * @param  \App\Models\Calendar  $calendar
      * @return \Illuminate\Http\Response
      */
-    public function show(Player $player)
+    public function show(Calendar $calendar)
     {
         //
     }
@@ -52,10 +52,10 @@ class PlayerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Player  $player
+     * @param  \App\Models\Calendar  $calendar
      * @return \Illuminate\Http\Response
      */
-    public function edit(Player $player)
+    public function edit(Calendar $calendar)
     {
         //
     }
@@ -64,10 +64,10 @@ class PlayerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Player  $player
+     * @param  \App\Models\Calendar  $calendar
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Player $player)
+    public function update(Request $request, Calendar $calendar)
     {
         //
     }
@@ -75,10 +75,10 @@ class PlayerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Player  $player
+     * @param  \App\Models\Calendar  $calendar
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Player $player)
+    public function destroy(Calendar $calendar)
     {
         //
     }

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Calendar;
+use App\Models\League;
 use Illuminate\Http\Request;
-
-class CalendarController extends Controller
+use App\Http\Controllers\Controller;
+class LeagueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CalendarController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Calendar  $calendar
+     * @param  \App\Models\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function show(Calendar $calendar)
+    public function show(League $league)
     {
         //
     }
@@ -52,10 +52,10 @@ class CalendarController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Calendar  $calendar
+     * @param  \App\Models\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function edit(Calendar $calendar)
+    public function edit(League $league)
     {
         //
     }
@@ -64,10 +64,10 @@ class CalendarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Calendar  $calendar
+     * @param  \App\Models\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Calendar $calendar)
+    public function update(Request $request, League $league)
     {
         //
     }
@@ -75,10 +75,10 @@ class CalendarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Calendar  $calendar
+     * @param  \App\Models\League  $league
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Calendar $calendar)
+    public function destroy(League $league)
     {
         //
     }
