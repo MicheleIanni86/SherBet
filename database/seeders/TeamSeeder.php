@@ -21,7 +21,7 @@ class TeamSeeder extends Seeder
                 'x-rapidapi-host' => env('X_RAPIDAPI_HOST'),
                 'x-rapidapi-key' => env('X_RAPIDAPI_KEY')
             ];
-            $response = Http::withOptions(['verify' => false])->withHeaders($headers)->get('https://v3.football.api-sports.io/teams?league=135&season=2024');
+            $response = Http::withOptions(['verify' => false])->withHeaders($headers)->get(env('API_TEAM_URL'));
 
             if ($response->ok()) {
                 $data = $response->json();

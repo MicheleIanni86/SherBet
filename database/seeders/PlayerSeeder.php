@@ -21,7 +21,7 @@ class PlayerSeeder extends Seeder
                 'x-rapidapi-host' => env('X_RAPIDAPI_HOST'),
                 'x-rapidapi-key' => env('X_RAPIDAPI_KEY')
             ];
-            $response = Http::withOptions(['verify' => false])->withHeaders($headers)->get('https://v3.football.api-sports.io/players?league=135&season=2024');
+            $response = Http::withOptions(['verify' => false])->withHeaders($headers)->get(env('API_PLAYER_URL'));
 
             if ($response->ok()) {
                 $first_data = $response->json();
@@ -30,7 +30,8 @@ class PlayerSeeder extends Seeder
 
                 while ($page <= $total) {
                     $string_page = strval($page);
-                    $single_call_response = Http::withOptions(['verify' => false])->withHeaders($headers)->get("https://v3.football.api-sports.io/players?league=135&season=2024&page=$string_page");
+                    $newUrl = env('API_PLAYER_URL') . '&page=' . $string_page;
+                    $single_call_response = Http::withOptions(['verify' => false])->withHeaders($headers)->get( $newUrl );
                     $data = $single_call_response->json();
                     $results = $data['response'];
                     foreach ($results as $player) {

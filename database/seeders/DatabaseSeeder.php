@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TeamSeeder::class,
             PlayerSeeder::class,
-           // CalendarSeeder::class,
+            CalendarSeeder::class,
         ]);
     }
 }
