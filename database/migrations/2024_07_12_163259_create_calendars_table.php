@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->char('season', 4);
             $table->unsignedInteger('match_id')->unique();
-            $table->date('match_date');
+            $table->dateTime('match_date');
             $table->char('match_status', 5);
             $table->unsignedTinyInteger('match_elapsed')->nullable();
             $table->char('round', 2);
