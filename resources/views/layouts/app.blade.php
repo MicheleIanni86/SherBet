@@ -19,6 +19,7 @@
 
       <main>
         @yield('content')
+        @yield('showPrediction')
       </main>
 
       @include('layouts.partials.footer')

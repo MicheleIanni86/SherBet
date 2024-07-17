@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [GuestDashboardController::class, 'index'])
   ->name('home');
 
+
 // # Rotte protette
 Route::middleware('auth')
   ->prefix('/admin')
@@ -27,6 +28,7 @@ Route::middleware('auth')
 
     Route::get('/prediction', [PredictionController::class, 'index'])
       ->name('prediction');
+      Route::post('/filter', [PredictionController::class, 'filter']);
 
   });
 
